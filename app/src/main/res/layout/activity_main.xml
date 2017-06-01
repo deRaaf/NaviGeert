@@ -6,23 +6,43 @@
     android:layout_height="match_parent"
     tools:context="com.example.timra.navigeert.MainActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/button_route"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:drawableTop="@drawable/ic_map_black_24dp"
+        android:text="Route"
+        android:textAppearance="@style/TextAppearance.AppCompat"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintLeft_toRightOf="@+id/button_agenda"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintHorizontal_bias="1.0" />
 
     <Button
-        android:id="@+id/button_navigate_home"
+        android:id="@+id/button_agenda"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/roundedbutton"
-        android:elevation="0dp"
-        android:text="Button"
-        tools:layout_editor_absoluteX="91dp"
-        tools:layout_editor_absoluteY="155dp" />
+        android:drawableTop="@drawable/ic_event_note_black_24dp"
+        android:text="Agenda"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        app:layout_constraintLeft_toRightOf="@+id/button_home"
+        android:layout_marginLeft="44dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button_route" />
+
+    <Button
+        android:id="@+id/button_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:drawableTop="@drawable/ic_home_black_24dp"
+        android:onClick="viewMap"
+        android:text="Naar huis"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

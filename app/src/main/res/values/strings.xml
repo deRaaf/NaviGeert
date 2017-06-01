@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">NaviGeert</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
